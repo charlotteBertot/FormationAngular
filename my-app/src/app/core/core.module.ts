@@ -6,6 +6,6 @@ import { CollectionService } from './services/collection/collection.service';
   imports: [
     CommonModule
   ],
-  declarations: [CollectionService]
+  declarations: []
 })
 export class CoreModule { }

@@ -5,11 +5,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NavComponent } from './components/nav/nav.component';
 import { ItemDirective } from './directives/item/item.directive';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    RouterModule
   ],
   declarations: [
     NavComponent,

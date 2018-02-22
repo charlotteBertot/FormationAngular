@@ -4,7 +4,10 @@
 <div class="container">
   <div class="card" *ngFor="let item of collection">
     <div class="card-header">
-      {{ item.state }}
+      <!-- <span class="state-alivrer" *ngIf="state.ALIVRER === item.state">{{ item.state }}</span>
+      <span class="state-encours" *ngIf="state.ENCOURS === item.state">{{ item.state }}</span>
+      <span class="state-livree" *ngIf="state.LIVREE === item.state">{{ item.state }}</span> -->
+      <span [appItem]="item.state">{{ item.state }}</span>
     </div>
     <div class="card-body">
       <h5 class="card-title">{{ item.name | uppercase }}</h5>

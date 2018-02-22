@@ -10,6 +10,7 @@ import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
+import { CollectionService } from './core/services/collection/collection.service';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent
   ],
-  providers: [],
+  providers: [CollectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

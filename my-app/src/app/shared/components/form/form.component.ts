@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { State } from '../../enums/state.enum';
+import { Item } from '../../interfaces/item.model';
 
 @Component({
   selector: 'app-form',
@@ -11,6 +12,7 @@ export class FormComponent implements OnInit {
   form: FormGroup;
   state: any;
   stateLibelles = Object.values(State);
+  @Output() item: EventEmitter<Item> = new EventEmitter();
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -30,5 +32,11 @@ export class FormComponent implements OnInit {
       ],
       state: State.ALIVRER
     });
+  }
+
+  process(): void {
+    this.item.emit(this.form.value);
+    this.form.reset();
+    this.form.get('state').setValue(State.ALIVRER);
   }
 }

@@ -23,7 +23,8 @@ import { FormComponent } from './components/form/form.component';
   ],
   exports: [
     NavComponent,
-    ItemDirective
+    ItemDirective,
+    FormComponent
   ]
 })
 export class SharedModule { }

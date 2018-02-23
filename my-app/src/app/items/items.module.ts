@@ -5,6 +5,8 @@ import { SharedModule } from '../shared/shared.module';
 import { ItemComponent } from './components/item/item.component';
 import { ItemRoutingModule } from './item-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddItemComponent } from './containers/add-item/add-item.component';
+import { EditItemComponent } from './containers/edit-item/edit-item.component';
 
 @NgModule({
   imports: [
@@ -13,7 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ItemRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [ListItemsComponent, ItemComponent],
+  declarations: [ListItemsComponent, ItemComponent, AddItemComponent, EditItemComponent],
   exports: [ListItemsComponent]
 })
 export class ItemsModule { }

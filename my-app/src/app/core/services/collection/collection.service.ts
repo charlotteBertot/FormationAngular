@@ -27,4 +27,11 @@ export class CollectionService {
       console.log(error);
     });
   }
+
+  add(item: Item): void {
+    item.id = this.afs.createId();
+    this.itemsCollection.doc(item.id).set(item).catch((error) => {
+      console.log(error);
+    });
+  }
 }

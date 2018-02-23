@@ -5,17 +5,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NavComponent } from './components/nav/nav.component';
 import { ItemDirective } from './directives/item/item.directive';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   imports: [
     CommonModule,
     NgbModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   declarations: [
     NavComponent,
-    ItemDirective
+    ItemDirective,
+    FormComponent
   ],
   exports: [
     NavComponent,

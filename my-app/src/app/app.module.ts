@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { CollectionService } from './core/services/collection/collection.service';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment.prod';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { environment } from '../environments/environment.prod';
     NgbModule.forRoot(),
     SharedModule,
     PageNotFoundModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   declarations: [
     AppComponent

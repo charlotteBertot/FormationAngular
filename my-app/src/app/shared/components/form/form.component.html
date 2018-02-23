@@ -1,0 +1,14 @@
+<form [formGroup]="form" novalidate>
+  <div class="form-group">
+    <input class="form-control" placeholder="Nom et prénom" formControlName="name">
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="ex: 1234">
+  </div>
+  <select class="form-group" formControlName="state">
+    <option [ngValue]="state.ALIVRER">{{ state.ALIVRER }}</option>
+    <option [ngValue]="state.ENCOURS">{{ state.ENCOURS }}</option>
+    <option [ngValue]="state.LIVREE">{{ state.LIVREE }}</option>
+  </select>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
